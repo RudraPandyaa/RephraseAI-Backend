@@ -8,13 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000
 //  https://api.openai.com/v1/chat/completions
 // Middlewares
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "https://rephrase--ai.vercel.app/"],
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+app.use(cors());
 app.use(express.json())
 
 // Routes
